@@ -17,5 +17,3 @@ run: image.v
 		--network=host \
 		$$(cat image.v) \
 		ansible all -m ping
-
-

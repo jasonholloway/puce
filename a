@@ -1,0 +1,10 @@
+#!/bin/bash
+
+docker run -it \
+  -e SSHKEY \
+  -e SSHPASS \
+  -v ${PWD}/hosts:/etc/ansible/hosts \
+  --network=host \
+  $(cat image.v) \
+  ansible "$@"
+  
